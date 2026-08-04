@@ -76,3 +76,16 @@ export const login = async (req, res) => {
     res.status(500).json({ message: 'Server error', error: error.message })
   }
 }
+
+//GET Profile
+
+export const getProfile = async (req, res) => {
+  try{
+    res.json({
+      message: 'Profile fetched!' ,
+      user: req.user
+    })
+  } catch (error){
+    res.status(500).json({message: 'Server error'})
+  }
+}
