@@ -1,7 +1,13 @@
-function App() {
-  return (
-    <h1 className="text-3xl font-normal  bg-yellow-300 text-green-800">hii im suvnai aher </h1>
-  );
-}
+import  { BrowserRouter, Routes, Route} from 'react-router-dom'
+import Login from './pages/Auth/Login'
 
-export default App;
+function App(){
+  return (
+    <BrowserRouter>
+     <Routes>
+      <Route path="/login" element={<Login />}/>
+     </Routes>
+    </BrowserRouter>
+  )
+}
+export default App
