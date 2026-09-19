@@ -40,8 +40,8 @@ useEffect(() => {
         {/* Nav Items */}
         <div className="flex flex-col gap-1">
           {[
-            { icon: '🏠', label: 'Dashboard' },
-            { icon: '📋', label: 'Projects' },
+            { icon: '🏠', label: 'Dashboard',path:'/dashboard' },
+            { icon: '📋', label: 'Projects', path: '/projects'},
             { icon: '💬', label: 'Chat' },
             { icon: '🔔', label: 'Notifications' },
             { icon: '🤖', label: 'AI Assistant' },
@@ -49,6 +49,7 @@ useEffect(() => {
           ].map((item, i) => (
             <div
               key={i}
+              onClick={() => item.path && navigate(item.path)}
               className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm cursor-pointer transition-all
                 ${i === 0
                   ? 'bg-[#5b6af0]/10 text-[#e8eaf0]'
