@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { fetchTasks } from '../../store/slices/taskSlice'
 import { useNavigate } from 'react-router-dom'
 import { logout } from '../../store/slices/authSlice'
 
@@ -6,6 +8,16 @@ const Dashboard = () => {
   const { user } = useSelector(state => state.auth)
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const tasks = useSelector((state) => state.tasks)
+
+useEffect(() => {
+  dispatch(fetchTasks('6aaecfb401cefc9aadda4e05')) // project ki _id
+}, [dispatch])
+
+useEffect(() => {
+  console.log('TASKS STATE:', tasks)
+}, [tasks])
+  
 
   const handleLogout = () => {
     dispatch(logout())
