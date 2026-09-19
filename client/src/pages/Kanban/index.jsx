@@ -123,6 +123,7 @@ const KanbanBoard = () => {
                     <div
                       ref={provided.innerRef}
                       {...provided.droppableProps}
+                      onClick={() => navigate(`/tasks/${tasks._id}`)}
                       className={`min-h-[200px] rounded-lg transition-colors ${
                         snapshot.isDraggingOver ? "bg-[#5b6af0]/10" : ""
                       }`}
