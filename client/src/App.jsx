@@ -6,6 +6,7 @@ import Landing from './pages/landing'
 import Onboarding from './pages/Onboarding/index'
 import KanbanBoard from './pages/Kanban'
 import Projects from './pages/Projects'
+import TaskDetail from './pages/TaskDetail'
 
 
 function App(){
@@ -19,8 +20,7 @@ function App(){
       <Route path="/onboarding" element={<Onboarding />}/>
       <Route path="/projects/:projectId/board" element={<KanbanBoard />}/>
       <Route path="/projects" element={<Projects />}/>
-
-
+      <Route path="/tasks/:taskId" element={<TaskDetail />}/>
 
      </Routes>
     </BrowserRouter>
