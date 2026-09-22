@@ -123,7 +123,7 @@ const KanbanBoard = () => {
                     <div
                       ref={provided.innerRef}
                       {...provided.droppableProps}
-                      onClick={() => navigate(`/tasks/${tasks._id}`)}
+
                       className={`min-h-[200px] rounded-lg transition-colors ${
                         snapshot.isDraggingOver ? "bg-[#5b6af0]/10" : ""
                       }`}
@@ -135,6 +135,7 @@ const KanbanBoard = () => {
                               ref={provided.innerRef}
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
+                              onClick={() =>{console.log("CARD CLICKED:",task); navigate(`/tasks/${task._id}`);}}
                               className={`bg-[#0a0b0f] border rounded-lg p-3 mb-2 ${
                                 snapshot.isDragging
                                   ? "border-[#5b6af0]"

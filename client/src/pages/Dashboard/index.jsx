@@ -119,7 +119,7 @@ useEffect(() => {
           <p className="text-[#6b7280] text-sm mb-6">
             Invite your team, create projects, and start shipping faster.
           </p>
-          <button className="px-6 py-2.5 bg-[#5b6af0] hover:bg-[#4a58e0] text-white text-sm font-semibold rounded-lg transition-all">
+          <button onClick={() => navigate('/onboarding')} className="px-6 py-2.5 bg-[#5b6af0] hover:bg-[#4a58e0] text-white text-sm font-semibold rounded-lg transition-all">
             Create Workspace →
           </button>
         </div>
