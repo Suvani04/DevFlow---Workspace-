@@ -7,6 +7,8 @@ import Onboarding from './pages/Onboarding/index'
 import KanbanBoard from './pages/Kanban'
 import Projects from './pages/Projects'
 import TaskDetail from './pages/TaskDetail'
+import AIAssistant from './pages/AIAssistant'
+
 
 
 function App(){
@@ -21,6 +23,7 @@ function App(){
       <Route path="/projects/:projectId/board" element={<KanbanBoard />}/>
       <Route path="/projects" element={<Projects />}/>
       <Route path="/tasks/:taskId" element={<TaskDetail />}/>
+      <Route path="/ai-assistant" element={<AIAssistant />}/>
 
      </Routes>
     </BrowserRouter>
