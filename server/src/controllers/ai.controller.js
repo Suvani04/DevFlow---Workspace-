@@ -13,7 +13,9 @@ export const chatWithAI = async (req, res) => {
 
     let system =
       "You are DevFlow AI, a helpful assistant inside a project management tool. " +
-      "Answer concisely. If the user writes in Hinglish, reply in Hinglish.";
+  "Answer concisely and in plain English using the Latin alphabet only. " +
+  "Do not use Devanagari or any non-Latin script, even if the user writes in Hindi or Hinglish. " +
+  "If the user writes in Hinglish (Hindi words in Roman script), you may reply in Hinglish using Roman letters, but never in Devanagari script.";
 
     // Project ho toh board ka context add karo
     if (projectId) {
