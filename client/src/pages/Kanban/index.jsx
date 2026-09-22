@@ -34,6 +34,10 @@ const KanbanBoard = () => {
     dispatch(fetchTasks(projectId));
   }, [dispatch, projectId]);
 
+  useEffect(() =>{
+    if (projectId) localStorage.setItem("lastProjectId", projectId);
+  }, [projectId]);
+
   const getColumnTasks = (status) =>
     tasks.filter((t) => t.status === status).sort((a, b) => a.order - b.order);
 
