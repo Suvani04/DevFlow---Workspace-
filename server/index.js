@@ -6,6 +6,7 @@ import authRoutes from './src/routes/auth.routes.js'
 import WorkspaceRoutes from './src/routes/workspace.routes.js'
 import projectRoutes from './src/routes/project.routes.js'
 import taskRoutes from './src/routes/task.routes.js'
+import aiRoutes from './src/routes/ai.routes.js'
 
 dotenv.config()
 
@@ -17,6 +18,7 @@ app.use('/api/auth' ,authRoutes)
 app.use('/api/workspaces' , WorkspaceRoutes)
 app.use('/api/projects', projectRoutes)
 app.use('/api/tasks', taskRoutes)
+app.use('/api/ai', aiRoutes)
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'DevFlow running!' })
