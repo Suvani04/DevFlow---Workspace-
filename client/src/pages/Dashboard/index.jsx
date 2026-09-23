@@ -44,7 +44,7 @@ useEffect(() => {
             { icon: '📋', label: 'Projects', path: '/projects'},
             { icon: '💬', label: 'Chat' },
             { icon: '🔔', label: 'Notifications' },
-            { icon: '🤖', label: 'AI Assistant' },
+            { icon: '🤖', label: 'AI Assistant' ,path:'/ai-assistant'},
             { icon: '📊', label: 'Analytics' },
           ].map((item, i) => (
             <div
