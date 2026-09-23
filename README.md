@@ -4,6 +4,7 @@ An AI-powered collaborative developer platform — Jira + Slack + AI, all in one
 DevFlow Workspace is a full-stack project management tool built for dev teams. It combines workspace/project management, a drag-and-drop Kanban board, and an integrated AI assistant that understands your board's context and answers questions about your tasks in real time.
 
 🔗 Live App: dev-flow-workspace.vercel.app 
+
 🔗 Backend API: devflow-backend.onrender.com
 
 ⚠ Note: the backend is hosted on Render's free tier, which sleeps after 15 minutes of inactivity. The first request may take 30–60 seconds to wake up.
